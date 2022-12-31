@@ -1,7 +1,7 @@
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 
 
@@ -14,7 +14,7 @@ OBJ = $(SRC: .c=.o)
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-		$(CC) $(FLAGS)  $(OBJ) -o $(NAME)
+		$(CC) $(CPPFLAGS)  $(OBJ) -o $(NAME)
 
 clean:
 		rm -f *.o

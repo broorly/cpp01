@@ -1,13 +1,12 @@
-
 CC = c++
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 
 
-NAME = 	zombie
+NAME = 	a.out
 
-SRC = 	Zombie.cpp ZombieHorde.cpp main.cpp 
+SRC = 	main.cpp
 	
 OBJ = $(SRC: .c=.o)
 
