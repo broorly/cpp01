@@ -12,7 +12,7 @@ int main(int argc, char **argv) {
 
   if (argc != 4) 
   {
-    std::cout << "invalid argument !!" << std::endl;
+    std::cout << "invalid argument !" << std::endl;
     exit(1);
   }
   infile.open(argv[1]);

@@ -5,7 +5,7 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 
 
-NAME = 	a.out
+NAME = 	main
 
 SRC = 	main.cpp
 	
