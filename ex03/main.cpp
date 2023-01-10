@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mrafik <mrafik@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/06 14:45:06 by mrafik            #+#    #+#             */
+/*   Updated: 2023/01/10 12:15:24 by mrafik           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include "HumanA.hpp"
 #include "HumanB.hpp"
@@ -18,11 +30,12 @@ int main(void) {
     club.setType("some other type of club");
     jim.attack();
   }
+  
   std::cout << std::endl << "Custom test: attack with no weapon" << std::endl;
-  HumanB alf = HumanB("Alf");
-  alf.attack();
+  HumanB human = HumanB("human");
+  human.attack();
 	Weapon grenade_launcher = Weapon("Grenade Launcher");
-	alf.setWeapon(grenade_launcher);
-	alf.attack();
+	human.setWeapon(grenade_launcher);
+	human.attack();
   return 0;
 }

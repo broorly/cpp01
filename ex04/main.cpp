@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mrafik <mrafik@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/06 14:45:17 by mrafik            #+#    #+#             */
+/*   Updated: 2023/01/10 12:10:49 by mrafik           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include <fstream>
 #include <iostream>
@@ -25,11 +37,19 @@ int main(int argc, char **argv) {
   infile.close();
   text = buffer.str();
   int i = 0;
-  while ((i = text.find((std::string)argv[2], i)) != -1)
+  if(argv[3] && argv[3][0] &&argv[2] && argv[2][0])
   {
-    text.erase(i, ((std::string)argv[2]).length());
-    text.insert(i, (std::string)argv[3]);
-    i += ((std::string)argv[3]).length();
+    while ((i = text.find((std::string)argv[2], i)) != -1)
+    {
+      text.erase(i, ((std::string)argv[2]).length());
+      text.insert(i, (std::string)argv[3]);
+      i += ((std::string)argv[3]).length();
+    }
+  }
+  else
+  {
+    std::cout << "invalid argument !" << std::endl;
+    exit(1);
   }
   outfile.open(argv[1] + (std::string) ".replace");
   outfile << text;
